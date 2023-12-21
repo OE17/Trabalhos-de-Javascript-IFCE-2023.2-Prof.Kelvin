@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Conversor de Medidas</h2>
+
+<button onclick="converter()">Converter</button>
+
+<h3 id="saida"></h3>
+<h4 id="conversoes"></h4>
+
+<script>
+function converter() {
+  var metros = prompt("Digite uma distância em metros(m)");
+  var km = metros / 1000;
+  var hm = metros / 100;
+  var dam = metros / 10;
+  var dm = metros * 10;
+  var cm = metros * 100;
+  var mm = metros * 1000;
+
+  document.getElementById("saida").innerHTML = "A distância de " + metros + " metros, corresponde a:";
+  document.getElementById("conversoes").innerHTML =
+    km + " Kilômetros (Km)<br>" +
+    hm + " Hectômetros (Hm)<br>" +
+    dam + " Decâmetros (Dam)<br>" +
+    dm + " Decímetros (dm)<br>" +
+    cm + " Centímetros (cm)<br>" +
+    mm + " Milímetros (mm)";
+}
+</script>
+
+</body>
+</html>

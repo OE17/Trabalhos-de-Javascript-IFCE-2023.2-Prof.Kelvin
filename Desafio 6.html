@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Conversor de Temperaturas</h2>
+
+<button onclick="converter()">Converter</button>
+
+<p id="mensagem">Clique no botão acima para iniciar</p>
+
+<script>
+function converter() {
+  var tempC = prompt("Digite uma temperatura em °C (Celsius)");
+  var tempK = parseFloat(tempC) + 273.15;
+  var tempF = (parseFloat(tempC) * 9/5) + 32;
+  document.getElementById("mensagem").innerHTML = '<span style="font-size:18px;">A temperatura de ' + tempC + '°C , corresponde a:</span><br><span style="font-size:16px;">' + tempK.toFixed(2) + '°K (Kelvin)</span><br><span style="font-size:16px;">' + tempF.toFixed(2) + '°F (Farenheit)</span>';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Conversor R$-US$</h2>
+
+<button onclick="myFunction()">Converter</button>
+
+<p id="demo">Clique no botão acima para iniciar</p>
+
+<script>
+function myFunction() {
+  var cotacao = prompt("Qual é a cotação atual do dólar?");
+  var reais = prompt("Quantos R$ você tem na carteira?");
+  var dolares = reais / cotacao;
+  document.getElementById("demo").innerHTML = "Você tem " + dolares.toFixed(2) + " dólares.";
+}
+</script>
+
+</body>
+</html>

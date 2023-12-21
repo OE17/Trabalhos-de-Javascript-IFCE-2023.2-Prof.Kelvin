@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Antes e depois</h2>
+
+<button onclick="myFunction()">Antecessor e Sucessor</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var num = prompt("Por favor, digite um número inteiro", "0");
+  if (num != null) {
+    num = parseInt(num);
+    document.getElementById("demo").innerHTML =
+    "O antecessor de " + num + " é " + (num-1) + " e o sucessor é " + (num+1);
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resolvendo Bhaskara</title>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcularDelta()">Calcular</button>
+    <h3 id="mensagem">Considerando uma equação no formato ax^2 + bx + c = 0 , aperte o botão acima para calcular o valor de Δ.</h3>
+    <h4 id="resultado"></h4>
+
+    <script>
+        function calcularDelta() {
+            var a = prompt("Qual o valor de A ?");
+            var b = prompt("Qual o valor de B ?");
+            var c = prompt("Qual o valor de C ?");
+            var delta = (b*b) - (4*a*c);
+            document.getElementById("resultado").innerHTML = "A equação atual é " + a + "x^2 + " + b + "x + " + c + " = 0" + "<br>" +
+            "O cálculo realizado será Δ = " + b + "^2 - 4 * " + a + " * " + c + "<br>" +
+            "O valor calculado foi Δ = " + delta;
+        }
+    </script>
+</body>
+</html>

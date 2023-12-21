@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculando o Troco</title>
+</head>
+<body>
+
+<h2>Calculando o Troco</h2>
+
+<button onclick="calculateChange()">Comprar produto</button>
+
+<script>
+function calculateChange() {
+  var product = prompt("Que produto você está comprando?");
+  var price = parseFloat(prompt(`Quanto custa ${product} que você está comprando?`));
+  var payment = parseFloat(prompt(`Qual foi o valor que você deu para pagar ${product}?`));
+
+  if (isNaN(price) || isNaN(payment)) {
+    alert("Por favor, insira valores numéricos válidos.");
+    return;
+  }
+
+  var change = payment - price;
+
+  if (change < 0) {
+    alert("O valor pago é insuficiente. Por favor, forneça um valor suficiente.");
+    return;
+  }
+
+  alert(`Você comprou ${product} que custou R$${price.toFixed(2)}. Deu R$${payment.toFixed(2)} em dinheiro e vai receber R$${change.toFixed(2)} de troco. Volte sempre!`);
+}
+</script>
+
+</body>
+</html>
